@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EscalatePro — Formal Statutory Recovery Systems</title>
+<!-- Google Fonts: Newsreader, Plus Jakarta Sans, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0F172A",
+            canvas: "#F8FAFC",
+            leverage: "#C2410C",
+            audit: "#047857",
+            chalk: "#E2E8F0",
+            outline: "#76777d",
+            "surface-tint": "#565e74",
+            "on-tertiary-container": "#339471",
+            "on-secondary-fixed-variant": "#832600",
+            background: "#f8f9ff",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#ffb59d",
+            "on-background": "#0b1c30",
+            "surface-bright": "#f8f9ff",
+            "on-primary": "#ffffff",
+            "outline-variant": "#c6c6cd",
+            "tertiary-container": "#002115",
+            "surface-container-high": "#dce9ff",
+            secondary: "#ac3400",
+            "on-secondary-container": "#5d1900",
+            tertiary: "#000000",
+            "surface-container-highest": "#d3e4fe",
+            "tertiary-fixed-dim": "#7bd8b1",
+            primary: "#000000",
+            "tertiary-fixed": "#97f5cc",
+            "inverse-on-surface": "#eaf1ff",
+            "on-tertiary-fixed": "#002115",
+            "on-error-container": "#93000a",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed-variant": "#3f465c",
+            "on-tertiary-fixed-variant": "#00513a",
+            "primary-container": "#131b2e",
+            "on-error": "#ffffff",
+            "primary-fixed": "#dae2fd",
+            "primary-fixed-dim": "#bec6e0",
+            "inverse-primary": "#bec6e0",
+            "surface-variant": "#d3e4fe",
+            "on-secondary-fixed": "#390c00",
+            "surface-dim": "#cbdbf5",
+            "on-surface-variant": "#45464d",
+            "inverse-surface": "#213145",
+            "surface-container-low": "#eff4ff",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed": "#ffdbd0",
+            surface: "#f8f9ff",
+            "secondary-container": "#fd6b36",
+            "on-primary-fixed": "#131b2e",
+            "error-container": "#ffdad6",
+            "on-primary-container": "#7c839b",
+            "surface-container": "#e5eeff",
+            "on-surface": "#0b1c30",
+            error: "#ba1a1a"
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
+          },
+          fontFamily: {
+            display: ["Newsreader", "serif"],
+            sans: ["Plus Jakarta Sans", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"],
+            "title-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Newsreader", "serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "label-code": ["JetBrains Mono", "monospace"],
+            "title-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Newsreader", "serif"],
+            "headline-lg-mobile": ["Newsreader", "serif"],
+            "display-mobile": ["Newsreader", "serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "label-ledger": ["JetBrains Mono", "monospace"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Newsreader", "serif"],
+            display: ["Newsreader", "serif"]
+          },
+          fontSize: {
+            "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }],
+            "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }],
+            "label-code": ["11px", { lineHeight: "16px", letterSpacing: "0.06em", fontWeight: "600" }],
+            "title-lg": ["18px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+            "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "display-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.015em", fontWeight: "500" }],
+            "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }],
+            "label-ledger": ["13px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "500" }],
+            "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }],
+            "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            display: ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "500" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-ledger-shadow {
+      box-shadow: 2px 2px 0px 0px rgba(15, 23, 42, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] text-[#0F172A] font-sans antialiased selection:bg-[#fd6b36] selection:text-white">
+<!-- 1. STICKY HIGH-TRUST HEADER -->
+<header class="w-full sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-chalk py-3.5 px-4 sm:px-8 flex justify-between items-center transition-all">
+<!-- Brand Logo SVG & Typography -->
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-10 h-10 bg-[#0F172A] rounded-lg p-2 flex items-center justify-center relative shadow-sm">
+<svg class="w-full h-full fill-none stroke-current" stroke-width="2" viewbox="0 0 24 24">
+<!-- 3-Tier Escalating Steps -->
+<rect class="text-slate-400 fill-slate-400" height="6" rx="0.5" width="4" x="3" y="14"></rect>
+<rect class="text-slate-200 fill-slate-200" height="11" rx="0.5" width="4" x="10" y="9"></rect>
+<rect class="text-[#C2410C] fill-[#C2410C]" height="16" rx="0.5" width="4" x="17" y="4"></rect>
+<path d="M4 10 L8 6 L12 8 L20 2" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="font-title-lg text-title-lg tracking-tight uppercase text-on-surface leading-tight font-bold">EscalatePro</span>
+<span class="font-label-code text-label-code text-[#C2410C] tracking-widest font-mono">PAYMENT RECOVERY ENGINE</span>
+</div>
+</a>
+<!-- Desktop Center Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-body-md font-body-md text-[#45464d] hover:text-[#0F172A] transition-colors" href="#how-it-works">How It Recovers</a>
+<a class="text-body-md font-body-md text-[#45464d] hover:text-[#0F172A] transition-colors" href="#comparison">Why CRMs Fail</a>
+<a class="text-body-md font-body-md text-[#45464d] hover:text-[#0F172A] transition-colors" href="#pricing">Pricing &amp; Plans</a>
+</nav>
+<!-- Right Primary CTA -->
+<div class="flex items-center gap-4">
+<a class="inline-flex items-center justify-center bg-[#0F172A] hover:bg-slate-800 text-white font-title-md text-[13px] px-4 py-2 sm:px-5 sm:py-2.5 rounded transition-all active:scale-[0.98] shadow-sm" data-scroll-to="pricing" href="#pricing">
+        Calculate Recovery →
+      </a>
+</div>
+</header>
+<!-- 2. SPLIT HERO SECTION -->
+<section class="max-w-7xl mx-auto px-4 sm:px-8 py-12 lg:py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Copy & Interactive Engine Form -->
+<div class="lg:col-span-7 flex flex-col space-y-6">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200/80 px-3 py-1 rounded w-fit">
+<span class="w-2 h-2 rounded-full bg-[#C2410C] animate-pulse"></span>
+<span class="font-label-code text-label-code uppercase tracking-wider text-[#C2410C] font-semibold">
+            LEGAL LEVERAGE FOR OVERDUE INVOICES &amp; SCOPE CREEP
+          </span>
+</div>
+<!-- H1 Headline -->
+<h1 class="font-headline-lg text-[34px] sm:text-[44px] lg:text-[48px] leading-[1.12] text-[#0F172A] font-semibold tracking-tight">
+          Stop Making Awkward Payment Calls. <span class="font-display italic text-[#C2410C] font-normal">Automate Your Invoice Escalation.</span>
+</h1>
+<!-- Subheadline -->
+<p class="font-body-lg text-body-lg text-[#45464d] leading-relaxed max-w-2xl">
+          Paste your overdue invoice or out-of-scope email. Generate progressive, polite-to-firm follow-ups, calculate legally compliant late fees, and draft enforceable final demand letters with full audit trails.
+        </p>
+<!-- Interactive Escalation Form -->
+<div class="bg-white border border-[#CBD5E1] p-6 rounded-lg custom-ledger-shadow relative overflow-hidden mt-2">
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#0F172A]"></div>
+<div class="flex items-center justify-between pb-3 mb-5 border-b border-chalk">
+<span class="font-label-code text-label-code text-slate-500 uppercase tracking-wider">STATUTORY LEVERAGE CALCULATOR</span>
+<span class="inline-flex items-center gap-1 font-label-code text-[10px] text-[#047857] bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+<span class="material-symbols-outlined text-[12px]" data-icon="verified">verified</span> JURISDICTION AWARE
+            </span>
+</div>
+<form class="space-y-4" id="hero-interactive-form">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<!-- Field 1: Unpaid Balance -->
+<div>
+<label class="block font-label-code text-[11px] text-slate-700 uppercase mb-1.5" for="calc-balance">Unpaid Balance ($)</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 font-mono text-slate-400 text-sm">$</span>
+<input class="w-full pl-7 pr-3 py-2 text-sm font-mono border border-[#CBD5E1] rounded focus:outline-none focus:ring-1 focus:ring-[#0F172A] focus:border-[#0F172A] bg-white text-[#0F172A]" id="calc-balance" min="1" name="balance" required="" step="any" type="number" value="4850"/>
+</div>
+</div>
+<!-- Field 2: Days Past Due -->
+<div>
+<label class="block font-label-code text-[11px] text-slate-700 uppercase mb-1.5" for="calc-days">Days Past Due</label>
+<input class="w-full px-3 py-2 text-sm font-mono border border-[#CBD5E1] rounded focus:outline-none focus:ring-1 focus:ring-[#0F172A] focus:border-[#0F172A] bg-white text-[#0F172A]" id="calc-days" max="730" min="1" name="days" required="" type="number" value="38"/>
+</div>
+<!-- Field 3: Jurisdiction -->
+<div>
+<label class="block font-label-code text-[11px] text-slate-700 uppercase mb-1.5" for="calc-jurisdiction">Client Jurisdiction</label>
+<select class="w-full px-3 py-2 text-sm font-sans border border-[#CBD5E1] rounded focus:outline-none focus:ring-1 focus:ring-[#0F172A] focus:border-[#0F172A] bg-white text-[#0F172A]" id="calc-jurisdiction" name="jurisdiction">
+<option value="CA">California (Civil Code § 3289)</option>
+<option value="NY">New York (CPLR § 5004)</option>
+<option value="TX">Texas (Finance Code § 304)</option>
+<option value="UK/EU">UK / EU (Late Payment Act)</option>
+<option value="Other">Standard UCC Baseline</option>
+</select>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-[#C2410C] hover:bg-[#a3360a] text-white font-title-md py-3 px-6 rounded transition-all flex items-center justify-center gap-2 shadow-sm font-semibold active:scale-[0.99]" type="submit">
+<span>Generate Enforceable Escalation Sequence</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<!-- Micro Trust Badges -->
+<div class="flex flex-wrap items-center justify-center sm:justify-between text-slate-500 pt-2 text-[11px] gap-2 font-mono">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[#047857] text-[14px]" data-icon="check_circle">check_circle</span>
+                Statutory Interest Calibrated
+              </span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[#047857] text-[14px]" data-icon="lock">lock</span>
+                Zero awkward phone calls required
+              </span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[#047857] text-[14px]" data-icon="gavel">gavel</span>
+                Admissible Delivery Proof
+              </span>
+</div>
+</form>
+</div>
+</div>
+<!-- Right Column: Illustrative Legal Dossier Artifact -->
+<div class="lg:col-span-5">
+<div class="bg-white border border-[#CBD5E1] rounded-lg p-6 relative shadow-md">
+<!-- Formal Legal Strip -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-[#C2410C] rounded-t-lg"></div>
+<!-- Dossier Header -->
+<div class="flex items-start justify-between pb-4 border-b border-chalk">
+<div>
+<span class="font-label-code text-[10px] text-slate-500 uppercase tracking-widest block">CASE AUDIT RECORD</span>
+<span class="font-mono text-sm font-bold text-[#0F172A] tracking-wider">DOCKET #EP-2025-8841</span>
+</div>
+<div class="text-right">
+<span class="font-label-code text-[9px] uppercase px-2 py-0.5 bg-red-100 text-[#C2410C] rounded font-semibold border border-red-200">
+                ACTIVE DEMAND STAGE 3
+              </span>
+</div>
+</div>
+<!-- 3-Stage Progression Meter -->
+<div class="py-4 border-b border-chalk">
+<div class="flex justify-between items-center text-[11px] font-mono mb-2">
+<span class="text-slate-400">1. Polite Nudge</span>
+<span class="text-slate-400">2. Formal Audit</span>
+<span class="text-[#C2410C] font-bold">3. Statutory Demand</span>
+</div>
+<div class="w-full bg-slate-100 h-2 rounded overflow-hidden flex">
+<div class="w-1/3 bg-slate-300 h-full border-r border-white"></div>
+<div class="w-1/3 bg-slate-400 h-full border-r border-white"></div>
+<div class="w-1/3 bg-[#C2410C] h-full"></div>
+</div>
+<div class="flex justify-between text-[10px] font-mono text-slate-400 mt-1">
+<span>Day 7 (Resolved: 0)</span>
+<span>Day 21 (Ignored)</span>
+<span class="text-[#C2410C]">Day 38 (Executing)</span>
+</div>
+</div>
+<!-- Real-Time Accrual Ledger -->
+<div class="bg-[#F8FAFC] border border-chalk rounded p-3 my-4">
+<div class="flex justify-between items-center text-xs text-slate-600 mb-1">
+<span>Original Principal Invoice:</span>
+<span class="font-mono font-medium text-slate-800">$4,850.00</span>
+</div>
+<div class="flex justify-between items-center text-xs text-slate-600 mb-1">
+<span>Accrued Statutory Interest (10% p.a.):</span>
+<span class="font-mono font-medium text-[#C2410C]">+$134.82</span>
+</div>
+<div class="flex justify-between items-center text-xs text-slate-600 mb-2">
+<span>Late Administration Fee:</span>
+<span class="font-mono font-medium text-slate-800">+$75.00</span>
+</div>
+<div class="pt-2 border-t border-chalk flex justify-between items-center font-bold text-sm text-[#0F172A]">
+<span>TOTAL RECOVERY OBLIGATION:</span>
+<span class="font-mono text-base text-[#0F172A]">$5,059.82</span>
+</div>
+</div>
+<!-- Quote Excerpt Snippet -->
+<div class="border-l-2 border-[#C2410C] pl-3 py-1 bg-amber-50/40 rounded-r text-[13px] text-slate-700 italic font-display leading-relaxed mb-4">
+            "Pursuant to Cal. Civ. Code § 3289, unpaid commercial balances incur statutory pre-judgment interest from 30 days post-issuance. Formal litigation transfer will commence if unremitted within 72 hours."
+          </div>
+<!-- Bottom Metadata & Trigger -->
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-1.5 font-label-code text-[11px] text-slate-500">
+<span class="material-symbols-outlined text-emerald-600 text-sm" data-icon="fingerprint">fingerprint</span>
+<span>SHA-256 Audit Trail Locked</span>
+</div>
+<a class="font-label-code text-[11px] text-[#C2410C] hover:underline font-semibold flex items-center gap-1" data-scroll-to="pricing" href="#pricing">
+              View Legal Demand Template →
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. VOC PAIN VS. MECHANISM GRID -->
+<section class="py-20 bg-white border-y border-chalk" id="comparison">
+<div class="max-w-7xl mx-auto px-4 sm:px-8">
+<!-- Section Header -->
+<div class="max-w-3xl mb-14">
+<span class="font-label-code text-label-code text-[#C2410C] uppercase tracking-wider font-semibold">RECOVERY INFRASTRUCTURE GAP</span>
+<h2 class="font-headline-lg text-headline-lg text-[#0F172A] font-semibold mt-2 tracking-tight">
+          Why Standard Invoicing Tools Fail at Debt Collection
+        </h2>
+<p class="font-body-lg text-body-lg text-slate-600 mt-3">
+          CRMs like Bonsai or HoneyBook send a passive "reminder" and abandon you. EscalatePro enforces payment accountability through legal precedent.
+        </p>
+</div>
+<!-- 3 Comparison Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="border border-chalk rounded-lg p-6 bg-[#F8FAFC] flex flex-col justify-between hover:border-slate-300 transition-all custom-ledger-shadow">
+<div>
+<span class="font-label-code text-label-code text-slate-400 block mb-2 font-mono">COMPARISON / 01</span>
+<div class="bg-red-50/70 border border-red-200 p-3.5 rounded mb-4">
+<div class="text-[11px] font-mono text-red-700 font-semibold mb-1 uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="cancel">cancel</span> The Old, Awkward Way
+              </div>
+<p class="text-xs text-red-900 italic font-sans leading-relaxed">
+                "Just checking in again on this invoice! Hope you’re well! Totally understand you’re super busy, sorry to bug you :)"
+              </p>
+</div>
+<div class="bg-emerald-50/70 border border-emerald-200 p-3.5 rounded mb-5">
+<div class="text-[11px] font-mono text-emerald-800 font-semibold mb-1 uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="check_circle">check_circle</span> The EscalatePro Mechanism
+              </div>
+<p class="text-xs text-emerald-950 font-sans leading-relaxed">
+<strong>3-Tier Algorithmic Tone Shifting:</strong> Progresses objectively from cordial reminder to certified contractual notice without sounding emotional or defensive.
+              </p>
+</div>
+</div>
+<div class="pt-4 border-t border-chalk flex items-center justify-between text-xs font-mono">
+<span class="text-slate-500">Systemic Result:</span>
+<span class="font-bold text-[#0F172A] bg-white px-2 py-1 rounded border border-slate-200">Zero personal confrontation</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="border border-chalk rounded-lg p-6 bg-[#F8FAFC] flex flex-col justify-between hover:border-slate-300 transition-all custom-ledger-shadow">
+<div>
+<span class="font-label-code text-label-code text-slate-400 block mb-2 font-mono">COMPARISON / 02</span>
+<div class="bg-red-50/70 border border-red-200 p-3.5 rounded mb-4">
+<div class="text-[11px] font-mono text-red-700 font-semibold mb-1 uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="cancel">cancel</span> The Old, Awkward Way
+              </div>
+<p class="text-xs text-red-900 italic font-sans leading-relaxed">
+                "They kept asking for 14 minor revisions in Slack, but when I added the extra hours, they claimed they never authorized it."
+              </p>
+</div>
+<div class="bg-emerald-50/70 border border-emerald-200 p-3.5 rounded mb-5">
+<div class="text-[11px] font-mono text-emerald-800 font-semibold mb-1 uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="check_circle">check_circle</span> The EscalatePro Mechanism
+              </div>
+<p class="text-xs text-emerald-950 font-sans leading-relaxed">
+<strong>Scope-Creep Discrepancy Parsing:</strong> Scans correspondence threads, matches them against initial contracts, and drafts quantified addendum invoices automatically.
+              </p>
+</div>
+</div>
+<div class="pt-4 border-t border-chalk flex items-center justify-between text-xs font-mono">
+<span class="text-slate-500">Systemic Result:</span>
+<span class="font-bold text-[#0F172A] bg-white px-2 py-1 rounded border border-slate-200">Out-of-scope work billed &amp; justified</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="border border-chalk rounded-lg p-6 bg-[#F8FAFC] flex flex-col justify-between hover:border-slate-300 transition-all custom-ledger-shadow">
+<div>
+<span class="font-label-code text-label-code text-slate-400 block mb-2 font-mono">COMPARISON / 03</span>
+<div class="bg-red-50/70 border border-red-200 p-3.5 rounded mb-4">
+<div class="text-[11px] font-mono text-red-700 font-semibold mb-1 uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="cancel">cancel</span> The Old, Awkward Way
+              </div>
+<p class="text-xs text-red-900 italic font-sans leading-relaxed">
+                "Threatened small claims court via text message. They blocked my number and ignored my LinkedIn messages completely."
+              </p>
+</div>
+<div class="bg-emerald-50/70 border border-emerald-200 p-3.5 rounded mb-5">
+<div class="text-[11px] font-mono text-emerald-800 font-semibold mb-1 uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" data-icon="check_circle">check_circle</span> The EscalatePro Mechanism
+              </div>
+<p class="text-xs text-emerald-950 font-sans leading-relaxed">
+<strong>State-Specific Statutory Computation:</strong> Issues registered demands citing local civil codes, daily compounded statutory interest, and court-admissible audit logs.
+              </p>
+</div>
+</div>
+<div class="pt-4 border-t border-chalk flex items-center justify-between text-xs font-mono">
+<span class="text-slate-500">Systemic Result:</span>
+<span class="font-bold text-[#0F172A] bg-white px-2 py-1 rounded border border-slate-200">Legally enforceable leverage</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. CONCRETE PRODUCT PROOF & HOW IT WORKS -->
+<section class="py-20 bg-[#F8FAFC]" id="how-it-works">
+<div class="max-w-7xl mx-auto px-4 sm:px-8">
+<!-- Section Header -->
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-code text-label-code text-[#C2410C] uppercase tracking-wider font-semibold">PREDICTABLE RESOLUTION PATH</span>
+<h2 class="font-headline-lg text-headline-lg text-[#0F172A] font-semibold mt-2 tracking-tight">
+          From Ignored Invoice to Legally Certified Receipt
+        </h2>
+<p class="font-body-md text-body-md text-slate-600 mt-2">
+          Every step is procedurally designed to escalate commercial leverage while protecting professional dignity.
+        </p>
+</div>
+<!-- 3 Numbered Workflow Progression Rows -->
+<div class="space-y-6 max-w-4xl mx-auto">
+<!-- Row 01 -->
+<div class="bg-white border border-[#CBD5E1] rounded-lg p-6 hover:border-slate-400 transition-all custom-ledger-shadow">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-chalk">
+<div class="flex items-center gap-3">
+<span class="font-mono text-xl font-bold text-slate-400">01</span>
+<div>
+<h3 class="font-title-md text-title-md text-[#0F172A] font-semibold">Day 7–14: Gentle Professional Re-Anchor</h3>
+<span class="font-label-code text-[11px] text-slate-500">Tone: Courteous, factual, administrative</span>
+</div>
+</div>
+<span class="inline-flex items-center font-mono text-[11px] px-2.5 py-1 bg-slate-100 text-slate-700 rounded border border-slate-200 self-start sm:self-auto">
+              Stage 1 Template
+            </span>
+</div>
+<p class="text-body-md text-body-md text-slate-600 mt-4">
+            Directly checks whether accounts payable received the deliverables without friction. Establishes the clear administrative baseline on client servers and creates the primary timestamp for future interest calculations.
+          </p>
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+<span class="text-xs font-mono text-slate-400">Recovery Probability: 68% within 4 days</span>
+<button class="font-label-code text-[11px] text-[#0F172A] hover:text-[#C2410C] transition-colors underline font-medium" data-open-modal="true" type="button">
+              Copy Stage 1 Script →
+            </button>
+</div>
+</div>
+<!-- Row 02 -->
+<div class="bg-white border border-[#CBD5E1] rounded-lg p-6 hover:border-slate-400 transition-all custom-ledger-shadow">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-chalk">
+<div class="flex items-center gap-3">
+<span class="font-mono text-xl font-bold text-[#C2410C]">02</span>
+<div>
+<h3 class="font-title-md text-title-md text-[#0F172A] font-semibold">Day 21–30: Statutory Interest Notice &amp; Deliverable Lock</h3>
+<span class="font-label-code text-[11px] text-[#C2410C] font-semibold">Tone: Firm, contractual, financial</span>
+</div>
+</div>
+<span class="inline-flex items-center font-mono text-[11px] px-2.5 py-1 bg-amber-50 text-[#C2410C] rounded border border-amber-200 self-start sm:self-auto">
+              Stage 2 Template
+            </span>
+</div>
+<p class="text-body-md text-body-md text-slate-600 mt-4">
+            Attaches dynamic ledger computation adding accrued interest daily. Issues notice that unassigned intellectual property or active code licenses will suspend in 5 business days until balance remediation.
+          </p>
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+<span class="text-xs font-mono text-[#C2410C]">Recovery Probability: 89% aggregate</span>
+<button class="font-label-code text-[11px] text-[#0F172A] hover:text-[#C2410C] transition-colors underline font-medium" data-open-modal="true" type="button">
+              Copy Stage 2 Script →
+            </button>
+</div>
+</div>
+<!-- Row 03 -->
+<div class="bg-white border-2 border-[#0F172A] rounded-lg p-6 transition-all custom-ledger-shadow relative">
+<div class="absolute -top-3 right-6 bg-[#0F172A] text-white text-[10px] font-mono px-3 py-0.5 rounded uppercase tracking-wider">
+            Final Pre-Trial Demand
+          </div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-chalk">
+<div class="flex items-center gap-3">
+<span class="font-mono text-xl font-bold text-red-600">03</span>
+<div>
+<h3 class="font-title-md text-title-md text-[#0F172A] font-semibold">Day 45+: Certified Pre-Legal Demand &amp; Audit Ledger</h3>
+<span class="font-label-code text-[11px] text-red-600 font-semibold">Tone: Statutory legal precedent, court-admissible</span>
+</div>
+</div>
+<span class="inline-flex items-center font-mono text-[11px] px-2.5 py-1 bg-red-50 text-red-700 rounded border border-red-200 self-start sm:self-auto">
+              Stage 3 Dossier
+            </span>
+</div>
+<p class="text-body-md text-body-md text-slate-600 mt-4">
+            Generates certified, non-negotiable formal letter of intent with complete forensic correspondence record, verified delivery receipt, and pre-formatted statement of claim for jurisdictional small claims filings.
+          </p>
+<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+<span class="text-xs font-mono text-emerald-700 font-bold">Small Claims Ready Package</span>
+<button class="font-label-code text-[11px] text-[#C2410C] hover:underline font-semibold" data-open-modal="true" type="button">
+              Preview Formal Demand Packet →
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. TWO-TIER PRICING SECTION -->
+<section class="py-24 bg-[#0F172A] text-white border-t border-slate-800" id="pricing">
+<div class="max-w-7xl mx-auto px-4 sm:px-8">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="font-label-code text-label-code text-[#ffb59d] uppercase tracking-wider font-semibold font-mono">FAIR RECOVERY ECONOMICS</span>
+<h2 class="font-headline-lg text-[32px] sm:text-[40px] font-semibold mt-2 tracking-tight text-white leading-tight">
+          Recover Your Owed Invoices for Less Than 30 Minutes of Billable Time
+        </h2>
+<p class="font-body-lg text-body-lg text-slate-300 mt-3 max-w-2xl mx-auto">
+          No collection agency percentages. You keep 100% of your recovered fees, late penalties, and accrued interest.
+        </p>
+</div>
+<!-- Pricing Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+<!-- Tier 1: Solo Consultant -->
+<div class="bg-slate-800/80 border border-slate-700 rounded-lg p-8 flex flex-col justify-between hover:border-slate-500 transition-all">
+<div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="font-label-code text-slate-400 text-xs uppercase tracking-wider block font-mono">FOR INDEPENDENT OPERATORS</span>
+<h3 class="font-headline-md text-2xl font-bold text-white mt-1">Solo Consultant</h3>
+</div>
+</div>
+<div class="my-6">
+<div class="flex items-baseline gap-2">
+<span class="font-mono text-4xl sm:text-5xl font-bold text-white">$19</span>
+<span class="text-slate-400 text-sm font-mono">/ month</span>
+</div>
+<p class="text-xs text-slate-400 font-mono mt-1">Billed annually or cancel anytime</p>
+</div>
+<div class="border-t border-slate-700 py-6 space-y-3.5">
+<div class="flex items-center gap-3 text-sm text-slate-200">
+<span class="material-symbols-outlined text-emerald-400 text-lg" data-icon="check">check</span>
+<span>Up to 5 active overdue dispute escalations</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-slate-200">
+<span class="material-symbols-outlined text-emerald-400 text-lg" data-icon="check">check</span>
+<span>3-Tier automated tone escalation sequences</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-slate-200">
+<span class="material-symbols-outlined text-emerald-400 text-lg" data-icon="check">check</span>
+<span>50-State &amp; EU Statutory interest calculators</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-slate-200">
+<span class="material-symbols-outlined text-emerald-400 text-lg" data-icon="check">check</span>
+<span>Certified final demand letter PDF generator</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-slate-400">
+<span class="material-symbols-outlined text-slate-600 text-lg" data-icon="close">close</span>
+<span>Scope-creep communication parser</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 bg-white hover:bg-slate-100 text-[#0F172A] font-title-md py-3 px-6 rounded transition-all flex items-center justify-center gap-2 font-semibold active:scale-[0.98]" data-open-modal="true" data-tier="Solo Consultant" type="button">
+            Select Solo Consultant ($19/mo) →
+          </button>
+</div>
+<!-- Tier 2: Agency Escalation Pack (Featured) -->
+<div class="bg-slate-800/90 border-2 border-[#C2410C] rounded-lg p-8 flex flex-col justify-between relative shadow-xl">
+<!-- Featured Badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#C2410C] text-white text-[11px] font-mono px-4 py-1 rounded uppercase tracking-wider font-bold">
+            Most Popular for Agencies
+          </div>
+<div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="font-label-code text-[#ffb59d] text-xs uppercase tracking-wider block font-mono">FOR STUDIOS &amp; AGENCIES</span>
+<h3 class="font-headline-md text-2xl font-bold text-white mt-1">Agency Escalation Pack</h3>
+</div>
+</div>
+<div class="my-6">
+<div class="flex items-baseline gap-2">
+<span class="font-mono text-4xl sm:text-5xl font-bold text-white">$29</span>
+<span class="text-slate-400 text-sm font-mono">/ month</span>
+</div>
+<p class="text-xs text-slate-400 font-mono mt-1">Unlimited recovered dollars. Keep every cent.</p>
+</div>
+<div class="border-t border-slate-700 py-6 space-y-3.5">
+<div class="flex items-center gap-3 text-sm text-slate-200">
+<span class="material-symbols-outlined text-emerald-400 text-lg" data-icon="check">check</span>
+<strong class="text-white">Unlimited</strong> active invoice escalations
+              </div>
+<div class="flex items-center gap-3 text-sm text-slate-200">
+<span class="material-symbols-outlined text-emerald-400 text-lg" data-icon="check">check</span>
+<span>Scope-creep communication parser (Slack/Email)</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-slate-200">
+<span class="material-symbols-outlined text-emerald-400 text-lg" data-icon="check">check</span>
+<span>Court-admissible PDF audit exporter &amp; evidence locker</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-slate-200">
+<span class="material-symbols-outlined text-emerald-400 text-lg" data-icon="check">check</span>
+<span>Multi-client dispute registry &amp; warning flags</span>
+</div>
+<div class="flex items-center gap-3 text-sm text-slate-200">
+<span class="material-symbols-outlined text-emerald-400 text-lg" data-icon="check">check</span>
+<span>Direct legal counsel handoff export schema</span>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 bg-[#C2410C] hover:bg-[#a3360a] text-white font-title-md py-3 px-6 rounded transition-all flex items-center justify-center gap-2 font-semibold shadow-md active:scale-[0.98]" data-open-modal="true" data-tier="Agency Pack" type="button">
+            Select Agency Pack ($29/mo) →
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. UNIVERSAL TELEMETRY-VERIFIED LEAD CAPTURE MODAL -->
+<div class="fixed inset-0 z-50 bg-[#0F172A]/70 flex items-center justify-center p-4 hidden transition-opacity duration-200" id="signup-modal">
+<div class="bg-white border border-[#CBD5E1] rounded-lg max-w-md w-full p-6 sm:p-8 relative custom-ledger-shadow">
+<!-- Close Button -->
+<button class="absolute top-4 right-4 text-slate-400 hover:text-[#0F172A] p-1 rounded hover:bg-slate-100 transition-colors" id="modal-close">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<!-- Selected Tier Badge -->
+<div class="mb-4">
+<span class="font-mono text-[11px] uppercase tracking-wider px-2.5 py-1 bg-amber-50 text-[#C2410C] rounded font-semibold border border-amber-200" id="modal-tier-badge">
+          Agency Pack ($29/mo)
+        </span>
+</div>
+<!-- Modal Headline -->
+<h3 class="font-headline-md text-2xl font-bold text-[#0F172A] tracking-tight">
+        Access Your Escalation Suite
+      </h3>
+<p class="font-body-md text-body-md text-slate-600 mt-1 mb-6">
+        Generate your dispute packet instantly. No credit card required for initial calibration draft.
+      </p>
+<!-- Form -->
+<form class="space-y-4" id="lead-capture-form">
+<input id="modal-tier-input" name="selected_tier" type="hidden" value="Agency Pack"/>
+<input id="modal-balance-input" name="cached_invoice_amount" type="hidden" value="4850"/>
+<input id="modal-days-input" name="cached_days_past_due" type="hidden" value="38"/>
+<div>
+<label class="block font-label-code text-[11px] text-slate-700 uppercase mb-1" for="lead-name">Full Legal Name / Entity</label>
+<input class="w-full px-3 py-2 text-sm border border-[#CBD5E1] rounded focus:outline-none focus:ring-1 focus:ring-[#0F172A] focus:border-[#0F172A] bg-white text-[#0F172A]" id="lead-name" placeholder="Jane Doe or Apex Design LLC" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-code text-[11px] text-slate-700 uppercase mb-1" for="lead-email">Work Email Address</label>
+<input class="w-full px-3 py-2 text-sm border border-[#CBD5E1] rounded focus:outline-none focus:ring-1 focus:ring-[#0F172A] focus:border-[#0F172A] bg-white text-[#0F172A]" id="lead-email" placeholder="jane@apexagency.co" required="" type="email"/>
+</div>
+<div class="bg-[#F8FAFC] border border-chalk p-3 rounded text-[11px] font-mono text-slate-500">
+<div class="flex justify-between">
+<span>Staged Balance:</span>
+<span class="font-bold text-[#0F172A]" id="summary-balance">$4,850.00</span>
+</div>
+<div class="flex justify-between mt-1">
+<span>Audit Days Elapsed:</span>
+<span class="font-bold text-[#0F172A]" id="summary-days">38 Days</span>
+</div>
+</div>
+<button class="w-full bg-[#C2410C] hover:bg-[#a3360a] text-white font-title-md py-3 px-6 rounded transition-all flex items-center justify-center gap-2 font-semibold shadow-sm active:scale-[0.98]" id="submit-btn" type="submit">
+<span>Start Overdue Recovery →</span>
+</button>
+<p class="text-[11px] text-center text-slate-400 font-mono">
+          AES-256 encrypted docket transmission. Not legal advice.
+        </p>
+
+<p class="valideum-privacy-note text-[11px] opacity-75 mt-2 leading-relaxed">🔒 Your email is protected. Read our <a href="/campaign-privacy.html?brand=EscalatePro" target="_blank" rel="noopener" data-privacy-link="true" class="underline">Privacy Notice</a>.</p>
+</form>
+<!-- Instant Success Confirmation (Hidden initially) -->
+<div class="hidden text-center py-6 space-y-4" id="modal-success">
+<div class="w-12 h-12 bg-emerald-100 text-[#047857] rounded-full mx-auto flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="check">check</span>
+</div>
+<h4 class="font-headline-sm text-xl font-bold text-[#0F172A]">Recovery Docket Initialized</h4>
+<p class="text-sm text-slate-600">
+          We have generated your formal stage escalation dossier and sent your activation link to your email.
+        </p>
+<button class="w-full bg-[#0F172A] text-white py-2.5 rounded text-sm font-semibold hover:bg-slate-800 transition-colors" id="modal-finish-btn" type="button">
+          Return to Dashboard
+        </button>
+</div>
+</div>
+</div>
+<!-- 7. STICKY FOOTER -->
+<footer class="w-full border-t border-outline-variant bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<!-- Brand & Tagline -->
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-6 h-6 bg-[#0F172A] rounded p-1 flex items-center justify-center">
+<svg class="w-full h-full fill-none stroke-white" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M4 18 L10 12 L14 16 L20 6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<span class="font-title-md text-title-md tracking-tight uppercase text-on-surface font-bold">EscalatePro</span>
+</div>
+<p class="font-body-sm text-body-sm text-[#45464d]">
+          Automated Dispute Escalation for Independent Operators
+        </p>
+<p class="font-body-sm text-[11px] text-slate-400 mt-2 max-w-md">
+          © 2025 EscalatePro Technologies Inc. Formal Statutory Recovery Systems. Not legal advice. Procedural compliance tools only.
+        </p>
+</div>
+<!-- Links Cluster -->
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-sans text-slate-500">
+<a class="hover:text-secondary transition-colors" href="#how-it-works">Recovery Engine</a>
+<a class="hover:text-secondary transition-colors" href="#pricing">Statutory Interest Tables</a>
+<a class="hover:text-secondary transition-colors" href="#">Arbitration Clauses</a>
+<a class="hover:text-secondary transition-colors" href="#">Privacy Notice</a>
+<a class="hover:text-secondary transition-colors" href="#">Terms of Recovery</a>
+</div>
+</div>
+</footer>
+<!-- 8. COMPLETE EMBEDDED INTERACTIVE RUNTIME -->
+
+
+<!-- ========================================== -->
+<!-- VALIDEUM UNIVERSAL LEAD & INTENT CAPTURE MODAL -->
+<!-- ========================================== -->
+<div id="valideum-lead-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 hidden" role="dialog" aria-modal="true" aria-labelledby="valideum-modal-title">
+  <div class="relative w-full max-w-lg bg-[#14171d] text-[#e2e8f0] border border-[#232833] rounded-lg shadow-2xl p-6 md:p-8">
+    <!-- Close button -->
+    <button id="valideum-modal-close" type="button" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2 rounded focus:outline-none" aria-label="Close modal">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Modal Content -->
+    <div id="valideum-modal-content">
+      <div class="mb-6">
+        <div class="flex items-center gap-2.5 mb-3">
+          <div class="w-7 h-7 rounded bg-amber-500/15 border border-amber-500/40 flex items-center justify-center text-amber-400 font-bold text-xs uppercase">E</div>
+          <span id="valideum-modal-badge" class="text-xs uppercase font-bold tracking-widest text-amber-400">EscalatePro</span>
+        </div>
+        <h3 id="valideum-modal-title" class="text-xl md:text-2xl font-bold text-white leading-snug">Get Started with EscalatePro</h3>
+        <p id="valideum-modal-desc" class="text-sm text-gray-400 mt-1">Enter your email below to continue and receive your tailored EscalatePro access details.</p>
+      </div>
+
+      <form id="valideum-modal-form" class="space-y-4">
+        <input type="hidden" name="selected_tier" id="valideum-modal-tier" value="">
+        <input type="hidden" name="source_cta" id="valideum-modal-source" value="">
+        <div id="valideum-modal-preserved-fields"></div>
+
+        <div>
+          <label for="valideum-modal-email" class="block text-xs uppercase tracking-wider text-gray-300 font-semibold mb-1">Your Email Address</label>
+          <input type="email" id="valideum-modal-email" name="email" required placeholder="name@domain.com" class="w-full px-4 py-3 bg-[#0d0f12] border border-[#232833] rounded text-white placeholder-gray-500 focus:border-amber-500 focus:outline-none transition-colors">
+        </div>
+
+        <div>
+          <label for="valideum-modal-need" class="block text-xs uppercase tracking-wider text-gray-300 font-semibold mb-1">Primary Need / Note (Optional)</label>
+          <input type="text" id="valideum-modal-need" name="primary_need" placeholder="e.g. Specific goal, workflow, or requirement..." class="w-full px-4 py-3 bg-[#0d0f12] border border-[#232833] rounded text-white placeholder-gray-500 focus:border-amber-500 focus:outline-none transition-colors">
+        </div>
+
+        <button type="submit" id="valideum-modal-submit-btn" class="w-full py-3.5 px-6 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-black font-bold uppercase tracking-wider text-xs rounded transition-all shadow-lg cursor-pointer">
+          Continue
+        </button>
+
+        <p class="text-[11px] text-gray-400 text-center leading-relaxed pt-1">
+          🔒 Your email is protected. Read our <a href="/campaign-privacy.html?brand=EscalatePro" target="_blank" rel="noopener" data-privacy-link="true" class="text-amber-400 underline hover:text-amber-300">Privacy Notice</a>.
+        </p>
+      </form>
+    </div>
+
+    <!-- Confirmation state (D1/D2) -->
+    <div id="valideum-modal-confirmation" class="hidden text-center py-6">
+      <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-full flex items-center justify-center mx-auto mb-4 text-amber-400 text-xl font-bold">✓</div>
+      <div class="text-[11px] uppercase tracking-widest text-amber-400 font-bold mb-1">EscalatePro</div>
+      <h3 class="text-2xl font-bold text-white mb-2">You're On The List</h3>
+      <p class="text-sm text-gray-300 leading-relaxed max-w-sm mx-auto mb-4">
+        Thank you for your interest in EscalatePro! We've recorded your request and will notify you as soon as your access is ready.
+      </p>
+      <a href="/campaign-privacy.html?brand=EscalatePro" target="_blank" rel="noopener" data-privacy-link="true" class="text-xs text-amber-400/80 underline hover:text-amber-300 block mb-5">Privacy &amp; Early Access Notice</a>
+      <button type="button" id="valideum-confirmation-close" class="px-6 py-2.5 bg-[#232833] hover:bg-[#2d3340] text-white text-xs uppercase tracking-wider font-semibold rounded cursor-pointer">
+        Return to EscalatePro
+      </button>
+    </div>
+  </div>
+</div>
+<!-- END VALIDEUM UNIVERSAL MODAL -->
+
+
+<!-- ========================================== -->
+<!-- VALIDEUM UNIFIED CONVERSION & TELEMETRY RUNTIME -->
+<!-- ========================================== -->
+<script id="valideum-runtime">
+(function() {
+  if (window.__VALIDEUM_RUNTIME_ACTIVE) return;
+  window.__VALIDEUM_RUNTIME_ACTIVE = true;
+
+  const MODE = "preview"; // "preview" or "live"
+  const CAMPAIGN_ID = "";
+  const APP_URL = "https://valideum.com";
+  const API_ENDPOINT = APP_URL + "/api/track";
+  const KEYWORD_VARIANTS = {"escalatepro":"Stop Making Awkward Payment Calls. Automate Your Invoice Escalation.","freelancers":"Stop Making Awkward Payment Calls. Automate Your Invoice Escalation — Built for Freelancers.","small agencies":"Stop Making Awkward Payment Calls. Automate Your Invoice Escalation — Built for Small Agencies.","independent consultants":"Stop Making Awkward Payment Calls. Automate Your Invoice Escalation — Built for Independent...","eliminate awkward confrontations":"Eliminate awkward confrontations with progressive email sequences calibrated from polite...","automatically compute statutory":"Automatically compute statutory late fees and contractual interest compliant with your...","export certified final":"Export certified final demand letter packages ready for small claims court or collections...","particular task least":"Stop Making Awkward Payment Calls. Automate Your Invoice Escalation.","work sent invoice":"Stop Making Awkward Payment Calls. Automate Your Invoice Escalation.","start friendly reminder":"Stop Making Awkward Payment Calls. Automate Your Invoice Escalation."};
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const effectiveCampaignId = urlParams.get("campaign_id") || CAMPAIGN_ID;
+  let gclid = urlParams.get("gclid");
+  if (gclid) {
+    try { sessionStorage.setItem("valideum_gclid", gclid); } catch(e) {}
+  } else {
+    try { gclid = sessionStorage.getItem("valideum_gclid"); } catch(e) {}
+  }
+
+  // R2.5 Dynamic Keyword Headline Match (?kw={keyword})
+  // Only swaps from pre-approved KEYWORD_VARIANTS; never renders raw query text.
+  let matchedKw = null;
+  let swappedHeadline = null;
+  const rawKw = urlParams.get("kw") || urlParams.get("utm_term");
+  if (rawKw && KEYWORD_VARIANTS && Object.keys(KEYWORD_VARIANTS).length > 0) {
+    const normKw = rawKw.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
+    if (normKw.length >= 3) {
+      if (KEYWORD_VARIANTS[normKw]) {
+        matchedKw = normKw;
+        swappedHeadline = KEYWORD_VARIANTS[normKw];
+      } else {
+        const kwTokens = normKw.split(" ").filter(function(w) { return w.length >= 4; });
+        let bestScore = 0;
+        for (const [variantKey, headlineText] of Object.entries(KEYWORD_VARIANTS)) {
+          let score = 0;
+          for (let i = 0; i < kwTokens.length; i++) {
+            if (variantKey.indexOf(kwTokens[i]) !== -1) score++;
+          }
+          if (score > bestScore) {
+            bestScore = score;
+            matchedKw = variantKey;
+            swappedHeadline = headlineText;
+          }
+        }
+      }
+      if (swappedHeadline) {
+        const h1El = document.querySelector("h1");
+        if (h1El && h1El.innerText.trim() !== swappedHeadline.trim()) {
+          h1El.textContent = swappedHeadline;
+          h1El.setAttribute("data-kw-matched", matchedKw);
+        }
+      }
+    }
+  }
+
+  function isAutomatedOrPreviewContext() {
+    try {
+      // 1. Do not fire telemetry when embedded inside an iframe (e.g. Valideum dashboard miniature preview)
+      if (window.self !== window.top) return true;
+      // 2. Do not fire telemetry for headless / WebDriver browsers (SSL polling, CT-log scanners, crawlers)
+      if (navigator.webdriver === true) return true;
+      if (window.callPhantom || window._phantom || window.__nightmare) return true;
+      const ua = navigator.userAgent || "";
+      if (/(bot|crawl|spider|slurp|adsbot|mediapartners|headlesschrome|phantomjs|playwright|puppeteer|selenium|archive.org|dataprovider|fossick|lighthouse|pagespeed|censys|shodan|urlscan)/i.test(ua)) {
+        return true;
+      }
+    } catch (e) {
+      return true;
+    }
+    return false;
+  }
+
+  function sendEvent(eventType, metadata, extra) {
+    if (MODE !== "live" || !effectiveCampaignId) return;
+    if (isAutomatedOrPreviewContext()) return;
+    try {
+      const payload = JSON.stringify(Object.assign({
+        campaign_id: effectiveCampaignId,
+        event_type: eventType,
+        metadata: metadata || {},
+        gclid: gclid
+      }, extra || {}));
+      fetch(API_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: payload,
+        keepalive: true
+      }).catch(function() {
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(API_ENDPOINT, new Blob([payload], { type: "application/json" }));
+        }
+      });
+    } catch(e) {
+      console.warn("Valideum telemetry dispatch error:", e);
+    }
+  }
+
+  // Initial page view (live mode only)
+  sendEvent("page_view", {
+    path: window.location.pathname,
+    referrer: document.referrer || null,
+    kw_matched: matchedKw || null,
+    h1_variant: swappedHeadline || null
+  });
+
+  // Track whether visitor viewed the Privacy Notice BEFORE showing interest vs. showed interest directly
+  const BRAND_NAME = "EscalatePro";
+  let hasSeenPrivacy = false;
+  let privacySeenAt = null;
+  let hasShownInterest = false;
+
+  try {
+    const storedPriv = localStorage.getItem("valideum_seen_privacy") || sessionStorage.getItem("valideum_seen_privacy");
+    if (storedPriv) {
+      hasSeenPrivacy = true;
+      privacySeenAt = Number(storedPriv) || Date.now();
+    }
+    if (localStorage.getItem("valideum_shown_interest") || sessionStorage.getItem("valideum_shown_interest")) {
+      hasShownInterest = true;
+    }
+  } catch (e) {}
+
+  function checkSawPrivacy() {
+    if (hasSeenPrivacy) return true;
+    try {
+      const storedPriv = localStorage.getItem("valideum_seen_privacy") || sessionStorage.getItem("valideum_seen_privacy");
+      if (storedPriv) {
+        hasSeenPrivacy = true;
+        privacySeenAt = Number(storedPriv) || Date.now();
+        return true;
+      }
+    } catch (e) {}
+    return false;
+  }
+
+  function markInterest() {
+    hasShownInterest = true;
+    try {
+      sessionStorage.setItem("valideum_shown_interest", String(Date.now()));
+      localStorage.setItem("valideum_shown_interest", String(Date.now()));
+    } catch (e) {}
+  }
+
+  // SHA-256 helper
+  async function hashEmail(email) {
+    if (!email) return null;
+    try {
+      const normalized = email.toLowerCase().trim();
+      const encoder = new TextEncoder();
+      const data = encoder.encode(normalized);
+      const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+      return Array.from(new Uint8Array(hashBuffer)).map(function(b) { return b.toString(16).padStart(2, "0"); }).join("");
+    } catch(e) {
+      return null;
+    }
+  }
+
+  // Modal elements
+  const modal = document.getElementById("valideum-lead-modal");
+  const modalForm = document.getElementById("valideum-modal-form");
+  const modalClose = document.getElementById("valideum-modal-close");
+  const modalTitle = document.getElementById("valideum-modal-title");
+  const modalTierInput = document.getElementById("valideum-modal-tier");
+  const modalSourceInput = document.getElementById("valideum-modal-source");
+  const modalPreserved = document.getElementById("valideum-modal-preserved-fields");
+  const modalContent = document.getElementById("valideum-modal-content");
+  const modalConfirmation = document.getElementById("valideum-modal-confirmation");
+  const confClose = document.getElementById("valideum-confirmation-close");
+
+  let isModalSubmitted = false;
+  let preservedStep1Fields = {};
+
+  function syncPreservedFieldsToModal(fields) {
+    if (fields && typeof fields === "object") {
+      for (const [k, v] of Object.entries(fields)) {
+        if (v !== undefined && v !== null && String(v).trim() !== "") {
+          preservedStep1Fields[k] = String(v).trim();
+        }
+      }
+    }
+    if (modalPreserved) {
+      modalPreserved.innerHTML = "";
+      for (const [k, v] of Object.entries(preservedStep1Fields)) {
+        const inp = document.createElement("input");
+        inp.type = "hidden";
+        inp.name = "step1_" + k;
+        inp.value = String(v);
+        modalPreserved.appendChild(inp);
+      }
+    }
+  }
+
+  function findPricingSection() {
+    const byId = document.getElementById("pricing") || document.querySelector('[id*="pricing" i], [id*="plans" i], [id*="tiers" i]');
+    if (byId) return byId;
+    const tierBtn = document.querySelector("[data-tier]");
+    if (tierBtn && tierBtn.closest) {
+      return tierBtn.closest("section") || tierBtn.parentElement;
+    }
+    return null;
+  }
+
+  function scrollToPricingWithContext(fields) {
+    const pricingSection = findPricingSection();
+    if (!pricingSection) return false;
+
+    const valuesList = Object.values(preservedStep1Fields).filter(function(v) { return String(v).trim().length > 0; });
+    if (valuesList.length > 0) {
+      let banner = document.getElementById("valideum-pricing-context-banner");
+      if (!banner) {
+        banner = document.createElement("div");
+        banner.id = "valideum-pricing-context-banner";
+        banner.style.cssText = "max-width:48rem;margin:0 auto 1.5rem auto;padding:0.875rem 1.25rem;background:#14171d;border:1px solid rgba(217,119,6,0.45);border-left:4px solid #d97706;border-radius:6px;color:#e2e8f0;font-size:0.9rem;display:flex;align-items:center;justify-content:space-between;gap:0.75rem;box-shadow:0 10px 25px rgba(0,0,0,0.35);";
+        pricingSection.insertBefore(banner, pricingSection.firstChild);
+      }
+      const summaryText = valuesList.join(" • ");
+      banner.innerHTML = "";
+      const span = document.createElement("span");
+      span.textContent = "✓ Ready for: " + summaryText + " — Select a plan below to continue.";
+      banner.appendChild(span);
+    }
+
+    try {
+      pricingSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    } catch (e) {
+      pricingSection.scrollIntoView();
+    }
+    return true;
+  }
+
+  function extractNearbyInputFields(container) {
+    const fields = {};
+    if (!container || !container.querySelectorAll) return fields;
+    const inputs = container.querySelectorAll("input, select, textarea");
+    for (let i = 0; i < inputs.length; i++) {
+      const el = inputs[i];
+      if (!el || el.type === "password" || el.type === "submit" || el.type === "button" || el.type === "hidden" || el.type === "email") continue;
+      const rawKey = el.name || el.id || el.getAttribute("placeholder") || ("field_" + i);
+      const cleanKey = String(rawKey).toLowerCase().replace(/[^a-z0-9_]+/g, "_").replace(/^_+|_+$/g, "").substring(0, 40) || ("field_" + i);
+      if (el.type === "radio" || el.type === "checkbox") {
+        if (el.checked && el.value) fields[cleanKey] = el.value.trim();
+      } else if (el.value && el.value.trim() !== "") {
+        fields[cleanKey] = el.value.trim();
+      }
+    }
+    return fields;
+  }
+
+  function showConfirmationModal() {
+    if (!modal) return;
+    isModalSubmitted = true;
+    if (modalContent) modalContent.classList.add("hidden");
+    if (modalConfirmation) modalConfirmation.classList.remove("hidden");
+    modal.classList.remove("hidden");
+  }
+
+  function openModal(options) {
+    if (!modal) return;
+    options = options || {};
+    const tier = options.tier || "";
+    const ctaName = options.ctaName || "general_cta";
+    const headerText = options.headerText || (tier ? "Get Started — " + tier : "Get Started with " + BRAND_NAME);
+
+    if (modalTierInput) modalTierInput.value = tier;
+    if (modalSourceInput) modalSourceInput.value = ctaName;
+    if (modalTitle) modalTitle.innerText = headerText;
+
+    syncPreservedFieldsToModal(options.preservedFields);
+
+    if (modalContent) modalContent.classList.remove("hidden");
+    if (modalConfirmation) modalConfirmation.classList.add("hidden");
+    isModalSubmitted = false;
+    modal.classList.remove("hidden");
+
+    const emailField = document.getElementById("valideum-modal-email");
+    if (emailField) {
+      setTimeout(function() { emailField.focus(); }, 50);
+    }
+
+    const sawPrivacy = checkSawPrivacy();
+    markInterest();
+    sendEvent("cta_click", {
+      cta_name: ctaName,
+      sub_type: "modal_open",
+      intent_type: "purchase_intent",
+      tier: tier || null,
+      saw_privacy_first: sawPrivacy
+    });
+  }
+
+  function closeModal() {
+    if (!modal || modal.classList.contains("hidden")) return;
+    modal.classList.add("hidden");
+    if (!isModalSubmitted) {
+      sendEvent("cta_click", {
+        sub_type: "modal_abandon",
+        tier: modalTierInput ? modalTierInput.value : null,
+        saw_privacy_first: checkSawPrivacy()
+      });
+    }
+  }
+
+  if (modalClose) modalClose.addEventListener("click", closeModal);
+  if (confClose) confClose.addEventListener("click", closeModal);
+  if (modal) {
+    modal.addEventListener("click", function(e) {
+      if (e.target === modal) closeModal();
+    });
+  }
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") closeModal();
+  });
+
+  // Handle modal submit
+  if (modalForm) {
+    modalForm.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const emailInput = document.getElementById("valideum-modal-email");
+      const rawEmail = emailInput ? emailInput.value.trim() : "";
+      if (!rawEmail) return;
+
+      const email_hash = await hashEmail(rawEmail);
+      const tier = modalTierInput && modalTierInput.value ? modalTierInput.value : null;
+
+      // Extract non-PII form fields
+      const formData = new FormData(modalForm);
+      const fields = {};
+      formData.forEach(function(val, key) {
+        if (key !== "email") fields[key] = val;
+      });
+
+      const sawPrivacy = checkSawPrivacy();
+      markInterest();
+      sendEvent("form_submit", {
+        form_name: "valideum_lead_modal",
+        selected_tier: tier,
+        fields: fields,
+        saw_privacy_first: sawPrivacy
+      }, { email_hash: email_hash });
+
+      showConfirmationModal();
+      setTimeout(function() { modalForm.reset(); }, 300);
+    });
+  }
+
+  // Wire every button & CTA click on the page
+  document.addEventListener("click", function(e) {
+    const target = e.target && e.target.closest ? e.target.closest("button, a, [data-track='click'], [data-open-modal]") : null;
+    if (!target) return;
+
+    const href = target.getAttribute("href") || "";
+    // Track Privacy Notice views (even inside the modal!) before returning
+    if (href.indexOf("privacy.html") !== -1 || href.indexOf("campaign-privacy.html") !== -1 || target.getAttribute("data-privacy-link") === "true") {
+      const firstTimePrivacy = !checkSawPrivacy();
+      hasSeenPrivacy = true;
+      privacySeenAt = privacySeenAt || Date.now();
+      try {
+        localStorage.setItem("valideum_seen_privacy", String(privacySeenAt));
+        sessionStorage.setItem("valideum_seen_privacy", String(privacySeenAt));
+      } catch (err) {}
+      if (firstTimePrivacy) {
+        sendEvent("cta_click", {
+          cta_name: "privacy_notice_link",
+          sub_type: "privacy_view",
+          had_prior_interest: hasShownInterest
+        });
+      }
+      return;
+    }
+
+    // Ignore modal internal buttons
+    if (target.closest("#valideum-lead-modal")) return;
+
+    const isModalTrigger = target.getAttribute("data-open-modal") === "true" || target.getAttribute("data-open-modal") === "" || href === "#valideum-lead-modal";
+    const isScrollToPricing = target.getAttribute("data-scroll-to") === "pricing" || href === "#pricing";
+    const tier = target.getAttribute("data-tier") || null;
+
+    // Form submit button inside an existing form (Note: button.type defaults to "submit" in DOM even outside forms!)
+    const inForm = Boolean(target.closest("form"));
+    const isSubmit = inForm && !isModalTrigger && !tier && (target.type === "submit" || target.tagName === "BUTTON");
+    if (isSubmit) {
+      return;
+    }
+
+    const ctaName = (target.getAttribute("data-cta-name") || target.innerText || target.value || "cta").trim().substring(0, 100);
+
+    // If CTA explicitly leads to pricing (or is a non-tier CTA inside a section with idea-specific inputs), capture inputs, track, and scroll to #pricing
+    const parentSection = target.closest ? (target.closest("form") || target.closest("section") || target.parentElement) : null;
+    const nearbyFields = !tier ? extractNearbyInputFields(parentSection) : {};
+    const hasNearbyInputValues = Object.keys(nearbyFields).length > 0;
+
+    function classifyClickIntent(el, label, hasTier, hasModalTrigger, hasToolInput) {
+      const explicit = (el.getAttribute("data-intent") || "").toLowerCase().trim();
+      if (explicit === "purchase" || explicit === "purchase_intent") return "purchase_intent";
+      if (explicit === "tool" || explicit === "tool_intent") return "tool_intent";
+      if (explicit === "hook" || explicit === "hook_engagement") return "hook_engagement";
+      if (hasToolInput) return "tool_intent";
+      if (hasTier || hasModalTrigger) return "purchase_intent";
+      const commercialRe = /(start|get started|join|subscribe|buy|purchase|unlock|claim|book|quote|demo|early access|waitlist|preorder|pre-order|choose|select|upgrade|sign up)/i;
+      const hookRe = /^(learn more|read more|see how|how it works|features|faq|pricing|plans|examples|close|menu|toggle)$/i;
+      if (hookRe.test(label) || el.hasAttribute("aria-expanded")) return "hook_engagement";
+      const linkHref = el.getAttribute("href") || "";
+      if (linkHref.startsWith("#") && !commercialRe.test(label)) return "hook_engagement";
+      if (el.tagName === "BUTTON" || commercialRe.test(label)) return "purchase_intent";
+      return "hook_engagement";
+    }
+
+    if (!tier && !isModalTrigger && (isScrollToPricing || hasNearbyInputValues)) {
+      const sawPrivacy = checkSawPrivacy();
+      markInterest();
+      if (hasNearbyInputValues) {
+        syncPreservedFieldsToModal(nearbyFields);
+        const toolIntent = classifyClickIntent(target, ctaName, false, false, true);
+        sendEvent("cta_click", {
+          cta_name: ctaName,
+          sub_type: "search_intent",
+          intent_type: toolIntent,
+          fields: nearbyFields,
+          anchor: "#pricing",
+          saw_privacy_first: sawPrivacy
+        });
+      } else {
+        const pricingScrollIntent = classifyClickIntent(target, ctaName, false, false, false);
+        sendEvent("cta_click", {
+          cta_name: ctaName,
+          intent_type: pricingScrollIntent,
+          anchor: "#pricing",
+          saw_privacy_first: sawPrivacy
+        });
+      }
+      if (scrollToPricingWithContext(nearbyFields)) {
+        e.preventDefault();
+        return;
+      }
+    }
+
+    if (tier || isModalTrigger || target.tagName === "BUTTON") {
+      e.preventDefault();
+      openModal({
+        tier: tier,
+        ctaName: ctaName,
+        headerText: tier ? "Get Started — " + tier : "Get Started with " + BRAND_NAME,
+        preservedFields: hasNearbyInputValues ? nearbyFields : undefined
+      });
+      return;
+    }
+
+    if (href === "#" || href === "/" || href === "/index.html") {
+      e.preventDefault();
+      try {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } catch (err) {
+        window.scrollTo(0, 0);
+      }
+      return;
+    }
+
+    if (href && href.startsWith("#")) {
+      const sawPrivacy = checkSawPrivacy();
+      markInterest();
+      const anchorIntent = classifyClickIntent(target, ctaName, false, false, false);
+      sendEvent("cta_click", { cta_name: ctaName, intent_type: anchorIntent, anchor: href, saw_privacy_first: sawPrivacy });
+    }
+  }, true);
+
+  // Wire every form submit on the page
+  document.addEventListener("submit", async function(e) {
+    const form = e.target;
+    if (!form || form.id === "valideum-modal-form") return;
+
+    e.preventDefault();
+    const formName = form.getAttribute("data-form-name") || form.id || "page_form";
+    const submitBtn = form.querySelector('button[type="submit"], input[type="submit"], button');
+    const submitCtaName = submitBtn ? (submitBtn.getAttribute("data-cta-name") || submitBtn.innerText || submitBtn.value || formName).trim().substring(0, 100) : formName;
+    const emailInput = form.querySelector('input[type="email"], input[name="email"], input[name*="email" i]');
+    const rawEmail = emailInput && emailInput.value ? emailInput.value.trim() : "";
+
+    // Collect non-PII form values (support name, id, and placeholder attributes)
+    const fields = {};
+    const elements = form.elements;
+    for (let i = 0; i < elements.length; i++) {
+      const el = elements[i];
+      if (!el || el.type === "password" || el.type === "submit" || el.tagName === "BUTTON") continue;
+      const rawKey = el.name || el.id || el.getAttribute("placeholder") || ("field_" + i);
+      const fieldKey = (el.name || el.id) ? (el.name || el.id) : String(rawKey).toLowerCase().replace(/[^a-z0-9_]+/g, "_").replace(/^_+|_+$/g, "").substring(0, 40);
+      if (!fieldKey) continue;
+      if (el.type === "radio" || el.type === "checkbox") {
+        if (el.checked) fields[fieldKey] = el.value;
+      } else if (el !== emailInput && el.value && el.value.trim() !== "") {
+        fields[fieldKey] = el.value.trim();
+      }
+    }
+
+    const sawPrivacy = checkSawPrivacy();
+    markInterest();
+
+    if (rawEmail) {
+      syncPreservedFieldsToModal(fields);
+      const mergedFields = Object.assign({}, preservedStep1Fields, fields);
+      const email_hash = await hashEmail(rawEmail);
+      sendEvent("form_submit", {
+        form_name: formName,
+        selected_tier: mergedFields.selected_tier || null,
+        fields: mergedFields,
+        saw_privacy_first: sawPrivacy
+      }, { email_hash: email_hash });
+
+      // Show confirmation modal state
+      showConfirmationModal();
+      setTimeout(function() { form.reset(); }, 300);
+    } else {
+      // Idea-specific interactive form (e.g. Company Name / License ID lookup).
+      // 1. Track search_intent with all entered fields
+      // 2. Preserve fields into the signup modal
+      // 3. Lead user to the #pricing section (or fall back to opening modal if no pricing section exists)
+      syncPreservedFieldsToModal(fields);
+      sendEvent("cta_click", {
+        form_name: formName,
+        cta_name: submitCtaName,
+        sub_type: "search_intent",
+        fields: fields,
+        anchor: "#pricing",
+        saw_privacy_first: sawPrivacy
+      });
+
+      const scrolledToPricing = scrollToPricingWithContext(fields);
+      if (!scrolledToPricing) {
+        openModal({
+          ctaName: formName + "_step1_search",
+          headerText: "Where should we send your " + BRAND_NAME + " results?",
+          preservedFields: fields
+        });
+      }
+    }
+  }, true);
+})();
+</script>
+
+</body></html>
